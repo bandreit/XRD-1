@@ -327,20 +327,10 @@ public class PrometeoCarController : MonoBehaviour
 
       }else{
 
-        if(Input.GetKey(KeyCode.W)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
-        }
-        if(Input.GetKey(KeyCode.S)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoReverse();
-        }
-
-        if(Input.GetKey(KeyCode.A)){
-          TurnLeft();
-        }
+       
+        // GoForward();
+        // TurnLeft();
+        
         if(Input.GetKey(KeyCode.D)){
           TurnRight();
         }
@@ -352,16 +342,16 @@ public class PrometeoCarController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space)){
           RecoverTraction();
         }
-        if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))){
-          ThrottleOff();
-        }
+        // if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))){
+        //   ThrottleOff();
+        // }
         if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar){
           InvokeRepeating("DecelerateCar", 0f, 0.1f);
           deceleratingCar = true;
         }
-        if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f){
-          ResetSteeringAngle();
-        }
+        // if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f){
+        //   ResetSteeringAngle();
+        // }
 
       }
 
@@ -497,15 +487,16 @@ public class PrometeoCarController : MonoBehaviour
 
     // This method apply positive torque to the wheels in order to go forward.
     public void GoForward(){
-      //If the forces aplied to the rigidbody in the 'x' asis are greater than
-      //3f, it means that the car is losing traction, then the car will start emitting particle systems.
-      if(Mathf.Abs(localVelocityX) > 2.5f){
-        isDrifting = true;
-        DriftCarPS();
-      }else{
-        isDrifting = false;
-        DriftCarPS();
-      }
+      DriftCarPS();
+      // //If the forces aplied to the rigidbody in the 'x' asis are greater than
+      // //3f, it means that the car is losing traction, then the car will start emitting particle systems.
+      // if(Mathf.Abs(localVelocityX) > 2.5f){
+      //   isDrifting = true;
+      //   DriftCarPS();
+      // }else{
+      //   isDrifting = false;
+      //   DriftCarPS();
+      // }
       // The following part sets the throttle power to 1 smoothly.
       throttleAxis = throttleAxis + (Time.deltaTime * 3f);
       if(throttleAxis > 1f){
@@ -687,43 +678,13 @@ public class PrometeoCarController : MonoBehaviour
     // depending on the value of the bool variables 'isDrifting' and 'isTractionLocked'.
     public void DriftCarPS(){
 
-      if(useEffects){
-        try{
-          if(isDrifting){
-            RLWParticleSystem.Play();
-            RRWParticleSystem.Play();
-          }else if(!isDrifting){
-            RLWParticleSystem.Stop();
-            RRWParticleSystem.Stop();
-          }
-        }catch(Exception ex){
-          Debug.LogWarning(ex);
-        }
-
-        try{
-          if((isTractionLocked || Mathf.Abs(localVelocityX) > 5f) && Mathf.Abs(carSpeed) > 12f){
-            RLWTireSkid.emitting = true;
-            RRWTireSkid.emitting = true;
-          }else {
-            RLWTireSkid.emitting = false;
-            RRWTireSkid.emitting = false;
-          }
-        }catch(Exception ex){
-          Debug.LogWarning(ex);
-        }
-      }else if(!useEffects){
-        if(RLWParticleSystem != null){
-          RLWParticleSystem.Stop();
-        }
-        if(RRWParticleSystem != null){
-          RRWParticleSystem.Stop();
-        }
-        if(RLWTireSkid != null){
-          RLWTireSkid.emitting = false;
-        }
-        if(RRWTireSkid != null){
-          RRWTireSkid.emitting = false;
-        }
+      if (useEffects)
+      {
+        RLWParticleSystem.Play();
+        RRWParticleSystem.Play();
+      
+        RLWTireSkid.emitting = true;
+        RRWTireSkid.emitting = true;
       }
 
     }
