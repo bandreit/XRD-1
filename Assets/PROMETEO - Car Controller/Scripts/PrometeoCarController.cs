@@ -326,10 +326,9 @@ public class PrometeoCarController : MonoBehaviour
         }
 
       }else{
-
        
-        // GoForward();
-        // TurnLeft();
+        GoForward();
+        TurnLeft();
         
         if(Input.GetKey(KeyCode.D)){
           TurnRight();
