@@ -326,21 +326,10 @@ public class PrometeoCarController : MonoBehaviour
         }
 
       }else{
-
-        if(Input.GetKey(KeyCode.W)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
-        }
-        if(Input.GetKey(KeyCode.S)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoReverse();
-        }
-
-        if(Input.GetKey(KeyCode.A)){
-          TurnLeft();
-        }
+       
+        GoForward();
+        TurnLeft();
+        
         if(Input.GetKey(KeyCode.D)){
           TurnRight();
         }
