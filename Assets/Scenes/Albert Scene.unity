@@ -1284,8 +1284,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camaro
       objectReference: {fileID: 0}
+    - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+--- !u!96 &1266032543 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4623163177645275460, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 1266032542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &1266032544 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 8973185167476496446, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 1266032542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1266032545 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 1266032542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1266032546 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 1266032542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1290944591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2792218741957914664, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -1871,6 +1899,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1290944591}
+  - {fileID: 1569083689}
+  - {fileID: 186152525}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
