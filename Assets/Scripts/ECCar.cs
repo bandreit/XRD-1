@@ -225,16 +225,7 @@ public class ECCar : MonoBehaviour
             // RRWTireSkid.emitting = true;
 
             // Go through all the wheels making them spin, and make the front wheels turn sideways based on rotation
-            for (index = 0; index < wheels.Length; index++)
-            {
-                // Turn the front wheels sideways based on rotation
-                if (index < frontWheels)
-                    wheels[index].localEulerAngles = Vector3.up * Mathf.LerpAngle(wheels[index].localEulerAngles.y,
-                        rotateDirection * driftAngle, Time.deltaTime * 10);
-
-                // Spin the wheel
-                wheels[index].Rotate(Vector3.right * Time.deltaTime * speed * 20, Space.Self);
-            }
+             
         }
         else // Otherwise, if we are no longer rotating, straighten up the car and front wheels
         {
