@@ -66,6 +66,10 @@ public class ECCar : MonoBehaviour
     public ParticleSystem RRWParticleSystem;
     public TrailRenderer RLWTireSkid;
     public TrailRenderer RRWTireSkid;
+    private bool shouldStopRotating = false;
+    private bool shouldScaleUp = false;
+    Vector3 velocity;
+
 
     public GameObject targetToMoveAround;
     private void Start()
@@ -86,6 +90,21 @@ public class ECCar : MonoBehaviour
      
         // Set a random chase angle for the AI car
         chaseAngle = Random.Range(chaseAngleRange.x, chaseAngleRange.y);
+        
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        shouldStopRotating = true;
     }
 
     // This function runs whenever we change a value in the component
@@ -100,6 +119,33 @@ public class ECCar : MonoBehaviour
     {
         // If the game hasn't started yet, nothing happens
         // if (gameController && gameController.gameStarted == false) return;
+
+        if (shouldStopRotating && !shouldScaleUp)
+        {
+            var targetRotation = Quaternion.LookRotation(targetPosition - thisTransform.position);
+            thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, targetRotation, speed*20 * Time.deltaTime);
+            
+            RLWParticleSystem.Stop();
+            RRWParticleSystem.Stop();
+        
+            thisTransform.position = Vector3.SmoothDamp(thisTransform.position, targetPosition, ref velocity, 0.5f, speed);
+
+            Debug.Log("distance " + Vector3.Distance(thisTransform.position, targetPosition));
+            if (Vector3.Distance(thisTransform.position, targetPosition) < 0.03f)
+            {
+                Debug.Log("SHOULD SCALE UP");
+                shouldScaleUp = true;
+                return;
+            }
+            
+            return;
+        };
+
+        if (shouldScaleUp)
+        {
+            transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
+            return;
+        }
 
         // Move the player forward
         thisTransform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);

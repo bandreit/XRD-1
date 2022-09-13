@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1061,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3137938426295812641, guid: 8816e007b62ed7946bf3c52af80776ae, type: 3}
       propertyPath: EnterTextHere
-      value: Chevrolet Mustang
+      value: Ford Mustang
       objectReference: {fileID: 0}
     - target: {fileID: 3137938426295812641, guid: 8816e007b62ed7946bf3c52af80776ae, type: 3}
       propertyPath: TextAppearingPosRot
@@ -2833,6 +2833,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 186340686}
     m_Modifications:
+    - target: {fileID: 2133813426980676613, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.4803772
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
+      value: 0.58912957
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133813426995971201, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4385897140142091396, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
       propertyPath: m_Name
       value: Ferrari
@@ -2908,6 +2944,34 @@ PrefabInstance:
     - target: {fileID: 6343209142138106651, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.4803772
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
+      value: 0.58912957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673490618525, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.076716855
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129651673504733209, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2100003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
@@ -6711,7 +6775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2792218741957914664, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01913
+      value: 0.038428348
       objectReference: {fileID: 0}
     - target: {fileID: 2792218741957914664, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_LocalScale.z
@@ -6761,6 +6825,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camaro
       objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.4803772
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
+      value: 0.58912957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150510551431316331, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.76
+      objectReference: {fileID: 0}
     - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -6768,6 +6868,34 @@ PrefabInstance:
     - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502157874773, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.7600002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.4803772
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
+      value: 0.58912957
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030880502176200401, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.076716855
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -6890,6 +7018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mustang
       objectReference: {fileID: 0}
+    - target: {fileID: 4402756320706410831, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.83
+      objectReference: {fileID: 0}
     - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: looping
       value: 1
@@ -6919,12 +7051,24 @@ PrefabInstance:
       value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
-      value: 0.49545288
+      value: 0.4803772
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[0].time
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].time
-      value: 0.66464233
+      value: 0.58912957
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.076716855
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: SizeModule.curve.minCurve.m_Curve.Array.data[1].value
@@ -6932,6 +7076,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320724654539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402756320985155147, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402756320999286479, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: SizeModule.separateAxes
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320999286479, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
