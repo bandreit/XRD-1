@@ -11,9 +11,9 @@ public class CarController : MonoBehaviour
     public Transform[] wheels;
     public int frontWheels = 2;
     [SerializeField] 
-    private float speed = 100f; 
+    private float speed = 100f;
     [SerializeField] 
-    private Transform targetTransform;
+    private GameObject targetToMoveAround;
     
     [Space(15)]
     [Header("Effects")]
@@ -30,6 +30,7 @@ public class CarController : MonoBehaviour
     public AudioSource tireScreechSound;
 
     private bool isDrifting = false;
+    private bool finished = false;
     private float tenSec = 25;
     private int i;
     private float initialCarEngineSoundPitch;
@@ -38,12 +39,13 @@ public class CarController : MonoBehaviour
     internal Vector3 targetPosition;
     private Vector3 velocity;
 
+    static Transform targetObject;
 
     private void Start()
     {
 
-        targetPosition = new Vector3(0, 0, 0);
         thisTransform = this.transform;
+        targetObject = targetToMoveAround.transform;
             
         if(useSounds){
             InvokeRepeating("CarSounds", 0f, 0.1f);
@@ -64,6 +66,7 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
+        if (targetObject) targetPosition = targetObject.transform.position;
         
             tenSec -= Time.smoothDeltaTime;
             if (tenSec >= 0)
@@ -96,7 +99,8 @@ public class CarController : MonoBehaviour
                 {
                     DriftAroundOrigin();
                 }
-                if(tenSec <= 6 )
+                
+                if(tenSec <= 6 && tenSec >= 1)
                 {
                     var targetRotation = Quaternion.LookRotation(targetPosition - thisTransform.position);
                         thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, targetRotation, speed*20 * Time.deltaTime);
@@ -104,7 +108,8 @@ public class CarController : MonoBehaviour
                         RLWParticleSystem.Stop();
                         RRWParticleSystem.Stop();
                         isDrifting = false;
-        
+
+
                         thisTransform.position = Vector3.SmoothDamp(thisTransform.position, targetPosition, ref velocity, 0.5f, speed);
                         
                         int index;
@@ -116,6 +121,17 @@ public class CarController : MonoBehaviour
                                     0, Time.deltaTime * 10);
                         
                         }
+                        
+                }
+
+                if (tenSec <= 1)
+                {
+                    RLWParticleSystem.Stop();
+                    RRWParticleSystem.Stop();
+                    isDrifting = false;
+                    finished = true;
+                    carEngineSound.Stop();
+                    transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
                 }
             }
             
@@ -143,6 +159,11 @@ public class CarController : MonoBehaviour
                     }
                 }else {
                     tireScreechSound.Stop();
+                }
+
+                if (finished)
+                {
+                    carEngineSound.Stop();
                 }
             }catch(Exception ex){
                 Debug.LogWarning(ex);
@@ -192,8 +213,8 @@ public class CarController : MonoBehaviour
     
     public void DriftAroundOrigin()
     {
-        transform.LookAt(new Vector3(0,0,0));
-        transform.RotateAround(new Vector3(0,0,0), new Vector3(0,1 ,0) ,90f * Time.deltaTime);
+        transform.LookAt(targetPosition);
+        transform.RotateAround(targetPosition, new Vector3(0,1 ,0) ,90f * Time.deltaTime);
         
         carEngineSound.pitch = Mathf.Lerp(0.7f, 1.1f ,Time.time);
         
