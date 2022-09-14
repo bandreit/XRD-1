@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 46194183}
   - component: {fileID: 46194182}
   - component: {fileID: 46194185}
+  - component: {fileID: 46194186}
   m_Layer: 0
   m_Name: Mustang Target
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46194181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
@@ -182,19 +183,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: ba5313f1d31554f8890ca7f75e3a9e83, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -223,7 +212,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 46194185}
+  mPreview: {fileID: 46194186}
 --- !u!4 &46194184
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +234,50 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &46194185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46194181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5777ea70a19a4a098b2af62769cefc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 2
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &46194186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2094,6 +2127,7 @@ GameObject:
   - component: {fileID: 186340686}
   - component: {fileID: 186340685}
   - component: {fileID: 186340684}
+  - component: {fileID: 186340688}
   - component: {fileID: 186340687}
   m_Layer: 0
   m_Name: Ferrari
@@ -2109,7 +2143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186340683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
@@ -2171,7 +2205,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 186340687}
+  mPreview: {fileID: 186340688}
 --- !u!4 &186340686
 Transform:
   m_ObjectHideFlags: 0
@@ -2195,6 +2229,50 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &186340687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186340683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5777ea70a19a4a098b2af62769cefc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 2
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &186340688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2392,6 +2470,7 @@ GameObject:
   - component: {fileID: 389501922}
   - component: {fileID: 389501921}
   - component: {fileID: 389501920}
+  - component: {fileID: 389501924}
   - component: {fileID: 389501923}
   m_Layer: 0
   m_Name: Camaro
@@ -2407,7 +2486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389501919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
@@ -2469,7 +2548,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 389501923}
+  mPreview: {fileID: 389501924}
 --- !u!4 &389501922
 Transform:
   m_ObjectHideFlags: 0
@@ -2491,6 +2570,50 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &389501923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389501919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5777ea70a19a4a098b2af62769cefc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 2
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &389501924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2745,6 +2868,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490498815}
   m_Mesh: {fileID: 0}
+--- !u!82 &497646675 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7556675837465142862, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 2004925065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &514855420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +3013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrari
       objectReference: {fileID: 0}
+    - target: {fileID: 4385897140142091396, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4385897140142091397, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2987,6 +3119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+--- !u!82 &706569382 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 696384783987538741, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+  m_PrefabInstance: {fileID: 706204899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!96 &707716556 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 1658169734760364644, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
@@ -3058,7 +3195,11 @@ MonoBehaviour:
   RRWParticleSystem: {fileID: 1659809441}
   RLWTireSkid: {fileID: 707716556}
   RRWTireSkid: {fileID: 1421547058}
+  tireScreechSound: {fileID: 706569382}
+  carEngineSound: {fileID: 1818392041}
   targetToMoveAround: {fileID: 1251660142}
+  tenSec: 5
+  timerRunning: 1
 --- !u!1 &1041463710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,6 +3236,11 @@ TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 8973185167476496446, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
   m_PrefabInstance: {fileID: 2004925065}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1110385063 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6076474952999781136, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 2004925065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1139368367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,7 +3265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139368367}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.17775, y: 0.01, z: 0.03}
+  m_LocalPosition: {x: -0.17775, y: 0.1, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4785,7 +4931,11 @@ MonoBehaviour:
   RRWParticleSystem: {fileID: 1804920951}
   RLWTireSkid: {fileID: 1045613819}
   RRWTireSkid: {fileID: 324459753}
+  tireScreechSound: {fileID: 497646675}
+  carEngineSound: {fileID: 1110385063}
   targetToMoveAround: {fileID: 133345334}
+  tenSec: 5
+  timerRunning: 1
 --- !u!96 &1421547058 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 4373866525993200554, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
@@ -6417,6 +6567,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
   m_PrefabInstance: {fileID: 2004925065}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1818392041 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6627681625508189756, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+  m_PrefabInstance: {fileID: 706204899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!96 &1824982043 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 7045468751846977024, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
@@ -6468,7 +6623,11 @@ MonoBehaviour:
   RRWParticleSystem: {fileID: 1330714546}
   RLWTireSkid: {fileID: 1824982043}
   RRWTireSkid: {fileID: 259095868}
+  tireScreechSound: {fileID: 2045506559}
+  carEngineSound: {fileID: 1951383284}
   targetToMoveAround: {fileID: 1873380229}
+  tenSec: 5
+  timerRunning: 1
 --- !u!1 &1873380229
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,6 +6775,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9188640840458259854, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
   m_PrefabInstance: {fileID: 2004925065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1951383284 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2819022134800364282, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 2045506558}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976830199
 GameObject:
@@ -6837,6 +7001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camaro
       objectReference: {fileID: 0}
+    - target: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6150510551416087535, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: simulationSpeed
       value: 0.99
@@ -7030,6 +7198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mustang
       objectReference: {fileID: 0}
+    - target: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819022134800364282, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4402756320706410831, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.83
@@ -7134,6 +7310,11 @@ PrefabInstance:
     - {fileID: 4402756320725895697, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
     - {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+--- !u!82 &2045506559 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7829892933057314056, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 2045506558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2045593880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4406014895092256262, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
