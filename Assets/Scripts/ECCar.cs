@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ECCar : MonoBehaviour
 {
@@ -71,7 +72,8 @@ public class ECCar : MonoBehaviour
     private bool shouldStopRotating = false;
     private bool shouldScaleUp = false;
     Vector3 velocity;
-
+    public AudioSource tireScreechSound;
+    public AudioSource carEngineSound; 
 
     public GameObject targetToMoveAround;
 
@@ -97,6 +99,8 @@ public class ECCar : MonoBehaviour
         // Set a random chase angle for the AI car
         chaseAngle = Random.Range(chaseAngleRange.x, chaseAngleRange.y);
         
+        tireScreechSound.Play();
+        
         StartCoroutine(ExampleCoroutine());
     }
 
@@ -119,35 +123,11 @@ public class ECCar : MonoBehaviour
         // Limit the maximum number of front wheels to the actual front wheels we have
         frontWheels = Mathf.Clamp(frontWheels, 0, wheels.Length);
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if (timerRunning)
-        {
-            tenSec -= Time.smoothDeltaTime;
-            if (tenSec >= 0)
-            {
-                Rotate(0);
-                Debug.Log("Waiting");
-                if (tenSec <= 2.5)
-                {
-                    RLWParticleSystem.Play();
-                    RRWParticleSystem.Play();
-                    Debug.Log("Drifting still");
-                }
-            }
-            else
-            {
-                Debug.Log("Done");
-                timerRunning = false;
-            }
-        }
-        else
-        {
-            // Move the player forward
-            thisTransform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
-
+  
         if (shouldStopRotating && !shouldScaleUp)
         {
             var targetRotation = Quaternion.LookRotation(targetPosition - thisTransform.position);
@@ -158,10 +138,8 @@ public class ECCar : MonoBehaviour
         
             thisTransform.position = Vector3.SmoothDamp(thisTransform.position, targetPosition, ref velocity, 0.5f, speed);
 
-            Debug.Log("distance " + Vector3.Distance(thisTransform.position, targetPosition));
             if (Vector3.Distance(thisTransform.position, targetPosition) < 0.03f)
             {
-                Debug.Log("SHOULD SCALE UP");
                 shouldScaleUp = true;
                 return;
             }
@@ -171,7 +149,26 @@ public class ECCar : MonoBehaviour
 
         if (shouldScaleUp)
         {
+            if(tireScreechSound != null && tireScreechSound.isPlaying){
+                tireScreechSound.Stop();
+            }
+
+            if (carEngineSound != null && carEngineSound.isPlaying)
+            {
+                carEngineSound.Stop();
+            }
+            
             transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
+
+            Transform textTransform = transform.Find(name + "Text");
+                
+            if (textTransform)
+            {
+                if (textTransform.gameObject.active)
+                {
+                    textTransform.gameObject.SetActive(true);
+                }
+            }
             return;
         }
 
@@ -193,7 +190,7 @@ public class ECCar : MonoBehaviour
 
             // If we have no ground object assigned, or it is turned off, then cars will use raycast to move along terrain surfaces
             if (groundObject == null || groundObject.gameObject.activeSelf == false) DetectGround();
-        }
+        
     }
 
 
@@ -270,8 +267,6 @@ public class ECCar : MonoBehaviour
 
             RLWParticleSystem.Play();
             RRWParticleSystem.Play();
-            // RLWTireSkid.emitting = true;
-            // RRWTireSkid.emitting = true;
 
             // Go through all the wheels making them spin, and make the front wheels turn sideways based on rotation
              
@@ -293,8 +288,7 @@ public class ECCar : MonoBehaviour
 
             RLWParticleSystem.Stop();
             RRWParticleSystem.Stop();
-            RLWTireSkid.emitting = false;
-            RRWTireSkid.emitting = false;
+   
 
             // Go through all the wheels making them spin faster than when turning, and return the front wheels to their 0 angle
             for (index = 0; index < wheels.Length; index++)
