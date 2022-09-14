@@ -150,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46194181}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
@@ -248,10 +248,8 @@ MonoBehaviour:
   StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -259,8 +257,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -274,9 +271,13 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
+  mObserverBehaviour: {fileID: 0}
+  mCallbackReceivedOnce: 0
 --- !u!114 &46194186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,8 +2128,8 @@ GameObject:
   - component: {fileID: 186340686}
   - component: {fileID: 186340685}
   - component: {fileID: 186340684}
-  - component: {fileID: 186340688}
   - component: {fileID: 186340687}
+  - component: {fileID: 186340688}
   m_Layer: 0
   m_Name: Ferrari
   m_TagString: Untagged
@@ -2243,10 +2244,8 @@ MonoBehaviour:
   StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -2254,8 +2253,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -2269,9 +2267,13 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
+  mObserverBehaviour: {fileID: 0}
+  mCallbackReceivedOnce: 0
 --- !u!114 &186340688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2449,11 +2451,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275427979}
   m_Mesh: {fileID: 1173203073983562504, guid: aa35326e084c5774b9fea1733afca70f, type: 3}
---- !u!96 &324459753 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 4623163177645275460, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
-  m_PrefabInstance: {fileID: 2004925065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &347273139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1792549862734306809, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -2470,8 +2467,8 @@ GameObject:
   - component: {fileID: 389501922}
   - component: {fileID: 389501921}
   - component: {fileID: 389501920}
-  - component: {fileID: 389501924}
   - component: {fileID: 389501923}
+  - component: {fileID: 389501924}
   m_Layer: 0
   m_Name: Camaro
   m_TagString: Untagged
@@ -2584,10 +2581,8 @@ MonoBehaviour:
   StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -2595,8 +2590,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -2610,9 +2604,13 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
+  mObserverBehaviour: {fileID: 0}
+  mCallbackReceivedOnce: 0
 --- !u!114 &389501924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2868,11 +2866,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490498815}
   m_Mesh: {fileID: 0}
---- !u!82 &497646675 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7556675837465142862, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
-  m_PrefabInstance: {fileID: 2004925065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &514855420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,16 +3112,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
---- !u!82 &706569382 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 696384783987538741, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
-  m_PrefabInstance: {fileID: 706204899}
-  m_PrefabAsset: {fileID: 0}
---- !u!96 &707716556 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 1658169734760364644, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
-  m_PrefabInstance: {fileID: 706204899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &753779315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1276657636418845578, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
@@ -3193,9 +3176,9 @@ MonoBehaviour:
     m_Bits: 0
   RLWParticleSystem: {fileID: 2120421903}
   RRWParticleSystem: {fileID: 1659809441}
-  RLWTireSkid: {fileID: 707716556}
-  RRWTireSkid: {fileID: 1421547058}
-  tireScreechSound: {fileID: 706569382}
+  RLWTireSkid: {fileID: 0}
+  RRWTireSkid: {fileID: 0}
+  tireScreechSound: {fileID: 1591254332}
   carEngineSound: {fileID: 1818392041}
   targetToMoveAround: {fileID: 1251660142}
   tenSec: 5
@@ -3231,11 +3214,6 @@ Transform:
   m_Father: {fileID: 389501922}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!96 &1045613819 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 8973185167476496446, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
-  m_PrefabInstance: {fileID: 2004925065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1110385063 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6076474952999781136, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -4929,18 +4907,13 @@ MonoBehaviour:
     m_Bits: 0
   RLWParticleSystem: {fileID: 2046137907}
   RRWParticleSystem: {fileID: 1804920951}
-  RLWTireSkid: {fileID: 1045613819}
-  RRWTireSkid: {fileID: 324459753}
-  tireScreechSound: {fileID: 497646675}
+  RLWTireSkid: {fileID: 0}
+  RRWTireSkid: {fileID: 0}
+  tireScreechSound: {fileID: 1913779233}
   carEngineSound: {fileID: 1110385063}
   targetToMoveAround: {fileID: 133345334}
   tenSec: 5
   timerRunning: 1
---- !u!96 &1421547058 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 4373866525993200554, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
-  m_PrefabInstance: {fileID: 706204899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1471814238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3137938426295812654, guid: 8816e007b62ed7946bf3c52af80776ae, type: 3}
@@ -6532,6 +6505,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6528361102885328038, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
   m_PrefabInstance: {fileID: 2045506558}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1591254332 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7785584906012592528, guid: 5e6116faab3e30f4f976f3f20f408729, type: 3}
+  m_PrefabInstance: {fileID: 706204899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1618939828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 948405438201742482, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -6659,6 +6637,11 @@ Transform:
   m_Father: {fileID: 46194184}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1913779233 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5367067500664211375, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+  m_PrefabInstance: {fileID: 2004925065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1915941672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7204,7 +7187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2819022134800364282, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4402756320706410831, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalPosition.z
