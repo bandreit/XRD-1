@@ -159,6 +159,16 @@ public class ECCar : MonoBehaviour
             }
             
             transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
+
+            Transform textTransform = transform.Find(name + "Text");
+                
+            if (textTransform)
+            {
+                if (textTransform.gameObject.active)
+                {
+                    textTransform.gameObject.SetActive(true);
+                }
+            }
             return;
         }
 
@@ -257,8 +267,6 @@ public class ECCar : MonoBehaviour
 
             RLWParticleSystem.Play();
             RRWParticleSystem.Play();
-            // RLWTireSkid.emitting = true;
-            // RRWTireSkid.emitting = true;
 
             // Go through all the wheels making them spin, and make the front wheels turn sideways based on rotation
              
@@ -280,8 +288,7 @@ public class ECCar : MonoBehaviour
 
             RLWParticleSystem.Stop();
             RRWParticleSystem.Stop();
-            RLWTireSkid.emitting = false;
-            RRWTireSkid.emitting = false;
+   
 
             // Go through all the wheels making them spin faster than when turning, and return the front wheels to their 0 angle
             for (index = 0; index < wheels.Length; index++)
