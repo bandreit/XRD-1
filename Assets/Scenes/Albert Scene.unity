@@ -267,6 +267,41 @@ MonoBehaviour:
   useSounds: 1
   carEngineSound: {fileID: 5194204}
   tireScreechSound: {fileID: 5194203}
+--- !u!114 &5194214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5313f1d31554f8890ca7f75e3a9e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotateSpeed: 200
+  driftAngle: 50
+  leanAngle: 10
+  chassis: {fileID: 0}
+  wheels: []
+  frontWheels: 2
+  speedVariation: 2
+  chaseAngle: 0
+  chaseAngleRange: {x: 0, y: 30}
+  avoidObstacles: 1
+  detectAngle: 2
+  detectDistance: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  RLWParticleSystem: {fileID: 0}
+  RRWParticleSystem: {fileID: 0}
+  RLWTireSkid: {fileID: 0}
+  RRWTireSkid: {fileID: 0}
+  targetToMoveAround: {fileID: 0}
+  tenSec: 5
+  timerRunning: 1
 --- !u!1 &70085894
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,8 +1002,8 @@ Transform:
   m_Children:
   - {fileID: 1072858589}
   - {fileID: 74346393}
-  - {fileID: 5194202}
   - {fileID: 276957133}
+  - {fileID: 5194202}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1051,7 +1086,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 132813664}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &301321617
 Material:
@@ -1111,7 +1146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 508184280}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508184276
 GameObject:
@@ -1216,8 +1251,8 @@ Transform:
   m_Children:
   - {fileID: 1222212563}
   - {fileID: 1998969363}
-  - {fileID: 2118368208}
   - {fileID: 412027543}
+  - {fileID: 2118368208}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
