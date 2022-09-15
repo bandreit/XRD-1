@@ -159,15 +159,15 @@ public class ECCar : MonoBehaviour
             }
             
             transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
-
-            Transform textTransform = transform.Find(name + "Text");
-                
-            if (textTransform)
+            var targetRotation = Quaternion.LookRotation(Vector3.forward);
+            thisTransform.rotation = Quaternion.Slerp(thisTransform.rotation, targetRotation, speed*20 * Time.deltaTime);
+            thisTransform.position =
+                Vector3.Slerp(thisTransform.position, targetPosition, speed * 20 * Time.deltaTime);
+            
+            var textGameObjects = GameObject.FindGameObjectsWithTag(name + "Tag");
+            foreach (var textGameObject in textGameObjects)
             {
-                if (textTransform.gameObject.active)
-                {
-                    textTransform.gameObject.SetActive(true);
-                }
+                Destroy(textGameObject);
             }
             return;
         }
@@ -355,5 +355,14 @@ public class ECCar : MonoBehaviour
             transform.TransformDirection(Vector3.forward) * detectDistance);
 
         Gizmos.DrawSphere(forwardPoint, 0.5f);
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name + " ++++++++++++++++====================");
+        if (other.name == "Cube")
+        {
+            Destroy(gameObject);
+        }
     }
 }

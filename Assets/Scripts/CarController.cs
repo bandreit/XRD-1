@@ -31,7 +31,7 @@ public class CarController : MonoBehaviour
 
     private bool isDrifting = false;
     private bool finished = false;
-    private float tenSec = 25;
+    private float tenSec = 22;
     private int i;
     private float initialCarEngineSoundPitch;
     private Transform thisTransform;
@@ -132,6 +132,12 @@ public class CarController : MonoBehaviour
                     finished = true;
                     carEngineSound.Stop();
                     transform.localScale = Vector3.Lerp (transform.localScale, new Vector3(0.05f, 0.05f, 0.05f), 2 * Time.deltaTime);
+                    
+                    var textGameObjects = GameObject.FindGameObjectsWithTag(name + "Tag");
+                    foreach (var textGameObject in textGameObjects)
+                    {
+                        Destroy(textGameObject);
+                    }
                 }
             }
             

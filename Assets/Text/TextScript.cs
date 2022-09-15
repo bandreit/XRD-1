@@ -19,7 +19,8 @@ public class TextScript : MonoBehaviour
 
     float Half = .8f;
     float More = 1.35f;
-
+    public string textTag;
+    
     GameObject[] gameobjectInstantiated;
 
     // Start is called before the first frame update
@@ -37,6 +38,21 @@ public class TextScript : MonoBehaviour
         }
 
         SizeOfString = EnterTextHere.Length;
+        
+        Debug.Log(EnterTextHere + " XXTEXT HERE");
+        if (EnterTextHere == "Ferrari Testarossa")
+        {
+            textTag = "FerrariTag";
+        } else if (EnterTextHere == "Ford Mustang")
+        {
+            textTag = "MustangTag";
+        } else if (EnterTextHere == "Chevrolet Camaro")
+        {
+            textTag = "CamaroTag";
+        }
+        
+        Debug.Log(textTag + " XXTEXT TAG HERE");
+
         Debug.Log(SizeOfString);
         gameobjectInstantiated = new GameObject[SizeOfString];
 
@@ -49,6 +65,7 @@ public class TextScript : MonoBehaviour
                 case '0':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[0], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -56,6 +73,7 @@ public class TextScript : MonoBehaviour
                 case '1':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[1], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -63,6 +81,7 @@ public class TextScript : MonoBehaviour
                 case '2':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[2], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -70,6 +89,7 @@ public class TextScript : MonoBehaviour
                 case '3':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[3], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -77,6 +97,7 @@ public class TextScript : MonoBehaviour
                 case '4':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[4], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -85,6 +106,7 @@ public class TextScript : MonoBehaviour
                 case '5':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[5], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -92,6 +114,7 @@ public class TextScript : MonoBehaviour
                 case '6':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[6], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -99,6 +122,7 @@ public class TextScript : MonoBehaviour
                 case '7':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[7], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -106,6 +130,7 @@ public class TextScript : MonoBehaviour
                 case '8':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[8], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -113,6 +138,7 @@ public class TextScript : MonoBehaviour
                 case '9':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[9], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -120,6 +146,7 @@ public class TextScript : MonoBehaviour
                 case 'a':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[10], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters ;
                     }
@@ -127,6 +154,7 @@ public class TextScript : MonoBehaviour
                 case 'b':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[11], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -134,6 +162,7 @@ public class TextScript : MonoBehaviour
                 case 'c':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[12], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -141,6 +170,7 @@ public class TextScript : MonoBehaviour
                 case 'd':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[13], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -148,6 +178,7 @@ public class TextScript : MonoBehaviour
                 case 'e':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[14], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -155,6 +186,7 @@ public class TextScript : MonoBehaviour
                 case 'f':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[15], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -162,6 +194,7 @@ public class TextScript : MonoBehaviour
                 case 'g':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[16], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -169,6 +202,7 @@ public class TextScript : MonoBehaviour
                 case 'h':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[17], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -177,6 +211,7 @@ public class TextScript : MonoBehaviour
                 case 'i':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[18], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half*.8f;
                     }
@@ -184,6 +219,7 @@ public class TextScript : MonoBehaviour
                 case 'j':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[19], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -191,6 +227,7 @@ public class TextScript : MonoBehaviour
                 case 'k':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[20], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -198,6 +235,7 @@ public class TextScript : MonoBehaviour
                 case 'l':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[21], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -205,6 +243,7 @@ public class TextScript : MonoBehaviour
                 case 'm':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[22], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -212,6 +251,7 @@ public class TextScript : MonoBehaviour
                 case 'n':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[23], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -219,6 +259,7 @@ public class TextScript : MonoBehaviour
                 case 'o':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[24], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -226,6 +267,7 @@ public class TextScript : MonoBehaviour
                 case 'p':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[25], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -233,6 +275,7 @@ public class TextScript : MonoBehaviour
                 case 'q':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[26], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -240,6 +283,7 @@ public class TextScript : MonoBehaviour
                 case 'r':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[27], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -247,6 +291,7 @@ public class TextScript : MonoBehaviour
                 case 's':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[28], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -254,6 +299,7 @@ public class TextScript : MonoBehaviour
                 case 't':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[29], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -261,6 +307,7 @@ public class TextScript : MonoBehaviour
                 case 'u':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[30], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -268,6 +315,7 @@ public class TextScript : MonoBehaviour
                 case 'v':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[31], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -275,6 +323,7 @@ public class TextScript : MonoBehaviour
                 case 'w':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[32], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -282,6 +331,7 @@ public class TextScript : MonoBehaviour
                 case 'x':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[33], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -289,6 +339,7 @@ public class TextScript : MonoBehaviour
                 case 'y':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[34], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -296,6 +347,7 @@ public class TextScript : MonoBehaviour
                 case 'z':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[35], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -303,6 +355,7 @@ public class TextScript : MonoBehaviour
                 case '}':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[36], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -310,6 +363,7 @@ public class TextScript : MonoBehaviour
                 case 'A':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[37], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters *More;
                     }
@@ -317,6 +371,7 @@ public class TextScript : MonoBehaviour
                 case 'B':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[38], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -324,6 +379,7 @@ public class TextScript : MonoBehaviour
                 case 'C':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[39], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -331,6 +387,7 @@ public class TextScript : MonoBehaviour
                 case 'D':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[40], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -338,6 +395,7 @@ public class TextScript : MonoBehaviour
                 case 'E':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[41], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -345,6 +403,7 @@ public class TextScript : MonoBehaviour
                 case 'F':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[42], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right)  * (GapBetweenCharacters - 0.01f) * More;
                     }
@@ -352,6 +411,7 @@ public class TextScript : MonoBehaviour
                 case 'G':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[43], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -359,6 +419,7 @@ public class TextScript : MonoBehaviour
                 case 'H':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[44], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -366,6 +427,7 @@ public class TextScript : MonoBehaviour
                 case 'I':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[45], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -373,6 +435,7 @@ public class TextScript : MonoBehaviour
                 case 'J':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[46], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -380,6 +443,7 @@ public class TextScript : MonoBehaviour
                 case 'K':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[47], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -387,6 +451,7 @@ public class TextScript : MonoBehaviour
                 case 'L':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[48], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -394,6 +459,7 @@ public class TextScript : MonoBehaviour
                 case 'M':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[49], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -401,6 +467,7 @@ public class TextScript : MonoBehaviour
                 case 'N':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[50], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -408,6 +475,7 @@ public class TextScript : MonoBehaviour
                 case 'O':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[51], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -415,6 +483,7 @@ public class TextScript : MonoBehaviour
                 case 'P':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[52], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -422,6 +491,7 @@ public class TextScript : MonoBehaviour
                 case 'Q':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[53], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -429,6 +499,7 @@ public class TextScript : MonoBehaviour
                 case 'R':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[54], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -436,6 +507,7 @@ public class TextScript : MonoBehaviour
                 case 'S':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[55], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters ;
                     }
@@ -443,6 +515,7 @@ public class TextScript : MonoBehaviour
                 case 'T':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[56], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -450,6 +523,7 @@ public class TextScript : MonoBehaviour
                 case 'U':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[57], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -457,6 +531,7 @@ public class TextScript : MonoBehaviour
                 case 'V':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[58], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -464,6 +539,7 @@ public class TextScript : MonoBehaviour
                 case 'W':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[59], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More*1.5f;
                     }
@@ -471,6 +547,7 @@ public class TextScript : MonoBehaviour
                 case 'X':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[60], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -478,6 +555,7 @@ public class TextScript : MonoBehaviour
                 case 'Y':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[61], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -485,6 +563,7 @@ public class TextScript : MonoBehaviour
                 case 'Z':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[62], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -492,6 +571,7 @@ public class TextScript : MonoBehaviour
                 case '!':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[63], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -499,6 +579,7 @@ public class TextScript : MonoBehaviour
                 case '"':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[64], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -506,6 +587,7 @@ public class TextScript : MonoBehaviour
                 case '#':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[65], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -513,6 +595,7 @@ public class TextScript : MonoBehaviour
                 case '$':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[66], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -520,6 +603,7 @@ public class TextScript : MonoBehaviour
                 case '%':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[67], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More;
                     }
@@ -527,6 +611,7 @@ public class TextScript : MonoBehaviour
                 case '&':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[68], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -534,6 +619,7 @@ public class TextScript : MonoBehaviour
                 case '\'':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[69], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -541,6 +627,7 @@ public class TextScript : MonoBehaviour
                 case '(':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[70], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -548,6 +635,7 @@ public class TextScript : MonoBehaviour
                 case ')':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[71], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -555,6 +643,7 @@ public class TextScript : MonoBehaviour
                 case '*':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[72], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -562,6 +651,7 @@ public class TextScript : MonoBehaviour
                 case '+':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[73], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -569,6 +659,7 @@ public class TextScript : MonoBehaviour
                 case ',':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[74], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -576,6 +667,7 @@ public class TextScript : MonoBehaviour
                 case '-':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[75], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -583,6 +675,7 @@ public class TextScript : MonoBehaviour
                 case ':':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[76], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -590,6 +683,7 @@ public class TextScript : MonoBehaviour
                 case ';':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[77], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -597,6 +691,7 @@ public class TextScript : MonoBehaviour
                 case '<':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[78], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -604,6 +699,7 @@ public class TextScript : MonoBehaviour
                 case '=':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[79], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -611,6 +707,7 @@ public class TextScript : MonoBehaviour
                 case '>':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[80], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -618,6 +715,7 @@ public class TextScript : MonoBehaviour
                 case '?':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[81], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -625,6 +723,7 @@ public class TextScript : MonoBehaviour
                 case '@':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[82], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * More*1.5f;
                     }
@@ -632,6 +731,7 @@ public class TextScript : MonoBehaviour
                 case '[':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[83], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -639,6 +739,7 @@ public class TextScript : MonoBehaviour
                 case '\\':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[84], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -646,6 +747,7 @@ public class TextScript : MonoBehaviour
                 case ']':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[85], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -653,6 +755,7 @@ public class TextScript : MonoBehaviour
                 case '^':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[86], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -660,6 +763,7 @@ public class TextScript : MonoBehaviour
                 case '_':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[87], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -667,6 +771,7 @@ public class TextScript : MonoBehaviour
                 case '`':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[88], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -674,6 +779,7 @@ public class TextScript : MonoBehaviour
                 case '.':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[89], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -681,6 +787,7 @@ public class TextScript : MonoBehaviour
                 case '/':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[90], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -688,6 +795,7 @@ public class TextScript : MonoBehaviour
                 case '{':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[91], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
@@ -695,6 +803,7 @@ public class TextScript : MonoBehaviour
                 case '|':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[92], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters * Half;
                     }
@@ -702,6 +811,7 @@ public class TextScript : MonoBehaviour
                 case '~':
                     {
                         gameobjectInstantiated[j] = Instantiate(Child[93], TextAppearingPosRot.transform.position, TextAppearingPosRot.transform.rotation, TextAppearingPosRot.transform.parent);
+                        gameobjectInstantiated[j].tag = textTag;
                         gameobjectInstantiated[j].transform.Rotate(RotationInX, RotationInY + 180, RotationInZ);
                         TextAppearingPosRot.transform.position += (TextAppearingPosRot.transform.right) * GapBetweenCharacters;
                     }
