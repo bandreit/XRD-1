@@ -6,7 +6,7 @@ public class MyDefaultEventTrackable : DefaultObserverEventHandler {
     {
         if (mObserverBehaviour)
         {
-            string[] cars = {"Mustang", "Ferrari", "Camaro"};
+            string[] cars = {"Mustang", "Ferrari", "Camaro", "Spawner"};
             foreach (var car in cars)
             {
                 if (transform.Find(car))

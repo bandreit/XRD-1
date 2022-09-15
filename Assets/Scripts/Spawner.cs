@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
@@ -9,24 +12,26 @@ public class Spawner : MonoBehaviour
     private GameObject obstacle;
     [SerializeField] 
     private GameObject target;
-    [SerializeField] 
-    private float speed = 10;
 
-    private float time = 2;
-    private void Update()
+    private Vector3 targetPosition;
+    void Start()
     {
-        time -= Time.smoothDeltaTime;
+        InvokeRepeating("LaunchObstacle", 5.5f, 0.7f);
+        if (target)
+        {
+            targetPosition = target.transform.position; 
+        }
+    }
 
-        if (time == 2)
+    void LaunchObstacle()
+    {
+        if (target)
         {
-            var newObject = GameObject.Instantiate(obstacle,  new Vector3(target.transform.position.x,0,target.transform.position.z + 0.5f), Quaternion.identity); 
-            newObject.transform.Translate(new Vector3(0,0,-1) * Time.deltaTime);
-            Destroy(newObject, 10);
+            GameObject obst = Instantiate(
+                obstacle, 
+                new Vector3(
+                    Random.Range(targetPosition.x - 0.01f, targetPosition.x + 0.01f), targetPosition.y, targetPosition.z + 0.01f),
+                Quaternion.identity);
         }
-        else
-        {
-            time = 2;
-        }
-        
     }
 }
